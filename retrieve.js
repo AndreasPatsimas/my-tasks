@@ -15,7 +15,6 @@ var myItems = allStorage();
 
 
 myItems.forEach(function(item){
-    console.log(item);
 
     let ul = document.querySelector("ul");
 
