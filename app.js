@@ -25,7 +25,8 @@ function onSubmit(e){
 
 function createListItem(nameOfItem){
 
-    if(nameOfItem !== ""){
+    if(nameOfItem.trim() !== "" && nameOfItem.length <= 46){
+        
         let li = document.createElement("li");
 
         li.setAttribute("class","collection-item");
@@ -46,6 +47,9 @@ function createListItem(nameOfItem){
         localStorage.setItem(nameOfItem,nameOfItem);
 
         taskInput.value = "";
+    }
+    else{
+        document.getElementById("validInput").innerText = "Number of characters must be : 1 - 46";
     }
 };
 
